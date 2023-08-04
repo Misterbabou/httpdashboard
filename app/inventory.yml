@@ -1,0 +1,51 @@
+index.html:
+  title: "Main Menu"
+  menu_list:
+    Google:
+      icon: "fas fa-cog"
+      link:
+        - name: Google
+          url: "https://www.google.com"
+        - name: Youtube
+          url: "https://www.youtube.com"
+    Other:
+      icon: "fas fa-globe"
+      link:
+        - name: Twitter
+          url: "https://twitter.com/"
+        - name: Facebook
+          url: "https://facebook.com/"
+dashboard2.html:
+  title: Page2
+  menu_list:
+    Google:
+      icon: "fas fa-cog"
+      link:
+        - name: Google
+          url: "https://www.google.com"
+        - name: Youtube
+          url: "https://www.youtube.com"
+    Other:
+      icon: "fas fa-globe"
+      link:
+        - name: Twitter
+          url: "https://twitter.com/"
+        - name: Facebook
+          url: "https://facebook.com/"
+dashboard3.html:
+  title: Page3
+  menu_list:
+    Google:
+      icon: "fas fa-cog"
+      link:
+        - name: Google
+          url: "https://www.google.com"
+        - name: Youtube
+          url: "https://www.youtube.com"
+    Other:
+      icon: "fas fa-globe"
+      link:
+        - name: Twitter
+          url: "https://twitter.com/"
+        - name: Facebook
+          url: "https://facebook.com/"

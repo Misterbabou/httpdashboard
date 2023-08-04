@@ -1,0 +1,7 @@
+<nav>
+  <ul class="menu" id="menu">
+    {% for page_name, page_data in pages_data.items() %}
+      <li><a href="{{ page_name.split('.')[0] }}.html">{{ page_data.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

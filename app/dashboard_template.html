@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Dashboard</title>
+  <link rel="icon" href="./img/link.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <script src="./script/script.js"></script> 
+</head>
+<body>
+
+{% include 'navbar_template.html' %}
+
+<h2>{{ data.title }}</h2>
+
+<table id="Search">
+<input class="fa" type="text" id="myInput" onkeyup="mySearch()" placeholder="&#xf002; Search..." title="Type in a name">
+
+ <div class="dropdown">
+  <button class="dropbtn">Category</button>
+  <div class="dropdown-content">
+    <button type="button" class="button" onclick="addText(''); mySearch()">All</button>
+    {% for menu in data.menu_list %}
+    <button type="button" class="button" onclick="addText('{{ menu }}'); mySearch()">{{ menu }}</button>
+    {% endfor %}
+  </div>
+ </div>
+ </table>
+
+<table id="myTable">
+  {% for menu, details in data.menu_list.items() %}
+    <tr class="header">
+      <th style="width:60%;"><i class="{{ details.icon }}"></i> {{ menu }}</th>
+    </tr>
+    {% for link in details.link %}
+    <tr class="trLink">
+      <td><a target="_blank" rel="noopener noreferrer" href="{{ link.url }}">{{ link.name }}</a></td>
+      <td style="display:none">{{ menu }}</td>
+    </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+</body>
+</html>
